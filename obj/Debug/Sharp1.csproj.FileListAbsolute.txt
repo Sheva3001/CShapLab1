@@ -1,0 +1,7 @@
+C:\Users\IgorS\source\repos\Sharp1\bin\Debug\Sharp1.exe.config
+C:\Users\IgorS\source\repos\Sharp1\bin\Debug\Sharp1.exe
+C:\Users\IgorS\source\repos\Sharp1\bin\Debug\Sharp1.pdb
+C:\Users\IgorS\source\repos\Sharp1\obj\Debug\Sharp1.csprojAssemblyReference.cache
+C:\Users\IgorS\source\repos\Sharp1\obj\Debug\Sharp1.csproj.CoreCompileInputs.cache
+C:\Users\IgorS\source\repos\Sharp1\obj\Debug\Sharp1.exe
+C:\Users\IgorS\source\repos\Sharp1\obj\Debug\Sharp1.pdb
