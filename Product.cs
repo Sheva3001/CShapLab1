@@ -6,7 +6,7 @@
 
         public Product(string _name) // Инициализация продукта
         {
-            this.name = _name;
+            name = _name;
         }
     }
 }

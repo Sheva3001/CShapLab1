@@ -10,27 +10,35 @@ namespace Sharp1
 
         public Company(string _name, List<Department> _departments, List<Order> _orders)
         {
-            this.name = _name;
-            this.departments = _departments;
-            this.orders = _orders;
+            name = _name;
+            departments = _departments;
+            orders = _orders;
         }
 
         public Product completeTask(Order task) // Выполнить заказ
         {
-            for (int i = 0; i < this.departments.Count; i++)
+            if(task == null)
             {
-                if (this.departments[i].IsTaskBeCompletedInTime(task))
+                return null;
+            }
+            for (int i = 0; i < departments.Count; i++)
+            {
+                if (departments[i].IsTaskBeCompletedInTime(task))
                 {
-                    return this.departments[i].CompleteTask(task);
+                    return departments[i].CompleteTask(task);
                 }
             }
             return null;
         }
         public bool isCompleteTask(Order task) // Проверить выполнения
         {
-            for (int i = 0; i < this.departments.Count; i++)
+            if (task == null)
             {
-                if (this.departments[i].IsTaskBeCompletedInTime(task))
+                return false;
+            }
+            for (int i = 0; i < departments.Count; i++)
+            {
+                if (departments[i].IsTaskBeCompletedInTime(task))
                 {
                     return true;
                 }

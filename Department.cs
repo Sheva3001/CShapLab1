@@ -9,12 +9,8 @@ namespace Sharp1
         public List<Employee> staff; // Сотрудники
         public Type type; // Тип отдела
 
-        public Department(string _name, List<Employee> _staff, Type _type) // Инициализация отдела
-        {
-            this.name = _name;
-            this.staff = _staff;
-            this.type = _type;
-        }
+        public Department() // Инициализация отдела
+        {}
 
         public bool IsTaskBeCompleted(Order task) // Проверка возможности выполнить заказ
         {
@@ -36,21 +32,48 @@ namespace Sharp1
         }
         public bool IsTaskBeCompletedInTime(Order task) // Проверка может ли отдел выполнить указанную задачу в срок
         {
-            if (!this.IsTaskBeCompleted(task))
+            if (!IsTaskBeCompleted(task))
             {
                 return false;
             }
-            else
+            for (int i = 0; i < staff.Count; i++)
             {
-                for (int i = 0; i < this.staff.Count; i++)
+                if (staff[i].IsTaskBeCompleted(task))
                 {
-                    if (this.staff[i].IsTaskBeCompleted(task))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
-                return false;
             }
+            return false;
+        }
+    }
+
+    public class DesktopDepartment : Department
+    {
+        public DesktopDepartment(string _name, List<Employee> _staff) // Инициализация отдела
+        {
+            name = _name;
+            staff = _staff;
+            type = Type.DesktopApp;
+        }
+    }
+
+    public class MobileDepartment : Department
+    {
+        public MobileDepartment(string _name, List<Employee> _staff) // Инициализация отдела
+        {
+            name = _name;
+            staff = _staff;
+            type = Type.MobileApp;
+        }
+    }
+
+    public class WebDepartment : Department
+    {
+        public WebDepartment(string _name, List<Employee> _staff) // Инициализация отдела
+        {
+            name = _name;
+            staff = _staff;
+            type = Type.WebApp;
         }
     }
 }

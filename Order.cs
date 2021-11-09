@@ -8,9 +8,9 @@
 
         public Order(string _name, Type _components, int _time)
         {
-            this.name = _name;
-            this.orderComponents = _components;
-            this.time = _time;
+            name = _name;
+            orderComponents = _components;
+            time = _time;
         }
     }
 }
